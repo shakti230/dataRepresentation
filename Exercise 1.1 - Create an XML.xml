@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Library>
+
+<Book category="Technical-Books"> 
+
+	<ISBN>1848829345</ISBN>
+	<Title>Computer Vision: Algorithms and Applications</Title>
+	<Author>Richard Szeliski</Author> 
+
+	<ISBN>1792644833</ISBN>
+	<Title>Algorithms</Title>
+	<Author>Jeff Erickson</Author>
+
+</Book>
+
+<Book category ="Cookery-Books">
+
+	<ISBN>1909166146</ISBN>
+	<Title>Four Seasons Cookery Book</Title>
+	<Author>Margaret Costa</Author>
+
+	<ISBN>1444756699</ISBN>
+	<Title>Gordon Ramsay's Ultimate Cookery Course</Title>
+	<Author>Gordon Ramsay</Author>
+
+</Book>
+
+</Library>
