@@ -1,10 +1,59 @@
-// Write some html that has a hidden element.
+<html> 
+<head> 
 
-<html>
-    <head>
-        <title> Javascript Exercise 1</title> 
-    </head>
-    <body>
-        <p hidden>This paragraph should be hidden.</p> //This paragraph will be hidden  
-    </body>
-</html>
+	<title>Javascript</title> 
+
+<!--Create a circle and a square. Apply a background colour to each. Use the onclick function in Javascript to set the shape to disappear when clicked --!>
+
+	<style type="text/css"> 
+		.circle { 
+			width: 150px; 
+			height: 150px; 
+			border-radius: 50%; 
+			float: left; 
+			margin-right: 50px; 
+		} 
+		
+		.square { 
+			width: 150px; 
+			height: 150px; 
+			border-radius: 0%; 
+			float: left; 
+			margin-right: 50px; 
+		} 
+		
+		#circle { 
+			background-color: #FF5733; 
+		} 
+		
+		#square { 
+			background-color: #339FFF; 
+		} 
+	</style> 
+
+</head> 
+
+<body> 
+
+	<p hidden>This paragraph should be hidden.</p>
+
+	<div class="circle" id="circle"></div> 
+	<div class="square" id="square"></div> 
+
+	<script type="text/javascript"> 
+		document.getElementById("circle").onclick = function() { 
+
+			document.getElementById("circle").style.display = "none"; 
+
+		} 
+
+		document.getElementById("square").onclick = function() { 
+
+			document.getElementById("square").style.display = "none"; 
+
+		} 
+	</script> 
+
+</body> 
+
+</html> 
