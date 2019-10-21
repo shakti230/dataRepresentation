@@ -1,0 +1,61 @@
+<html>
+	<head>
+	<title>View cars</title>
+	</head>
+	<body>
+		<h1>Cars</h1>
+		<div><button>Create</button></div>
+		<div>
+			<table border="1">
+				<tr>
+					<th>Reg</th>
+					<th>Make</th>
+					<th>Model</th>
+					<th>Price</th>
+					<th>Update</th>
+					<th>Delete</th>
+				</tr>
+				<tr>
+					<td>191 M0 123</td>
+					<td>Ford</td>
+					<td>Modeo</td>
+					<td>25,000</td>
+					<td><button>Update</button></td>
+					<td><button>Delete</button></td>
+				</tr>
+
+				<tr>
+					<td>132 D 3914</td>
+					<td>Fiat</td>
+					<td>Punto</td>
+					<td>12</td>
+					<td><button>Update</button></td>
+					<td><button>Delete</button></td>
+				</tr>
+
+				<tr>
+					<td>05 D 123</td>
+					<td>Nissan</td>
+					<td>Almera</td>
+					<td>500</td>
+					<td><button>Update</button></td>
+					<td><button>Delete</button></td>
+				</tr>
+			</table>
+		</div>
+
+		<div>
+			<h2><span>Create and</span> <span>update this</span> car</h2>
+			Reg <input type="text" name="reg"/><br/>
+			Make <select name="make">
+				 <option value="Ford">Ford</option>
+				 <option value="Fiat">Fiat</option>
+			   	 <option value="Nissan">Nissan</option>
+				 </select><br/>
+			Model <input type="text" name="model"/><br/>
+			Price <input type="number" name="price"/><br/>
+			<span><button>Create</button></span>
+			<span><button>Update</button></span>
+		</div>
+ </body>
+</html>
