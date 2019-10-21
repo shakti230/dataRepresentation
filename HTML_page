@@ -6,7 +6,7 @@
 		<h1>Cars</h1>
 		<div><button>Create</button></div>
 		<div>
-			<table border="1">
+			<table class="table">
 				<tr>
 					<th>Reg</th>
 					<th>Make</th>
