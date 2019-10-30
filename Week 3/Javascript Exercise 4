@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Javascript Exercise 4</title> 
+    </head>
+    <body>
+        <script>
+            var book ={}
+            book.title = "The Mindbody Prescription"
+            book.author = "John Sarno"
+            book.isbn = "758457w457"  
+            console.log("book is "+ JSON.stringify( book) ) 
+        </script>
+    </body>
+</html>
