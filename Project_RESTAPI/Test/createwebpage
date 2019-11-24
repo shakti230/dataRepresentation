@@ -1,0 +1,64 @@
+<html>
+	<head>
+	<title>View cars</title>
+	<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+	</head>
+	<body>
+		<h1>Online Training</h1>
+		<div><button>Create</button></div>
+		<div>
+			<table class="table">
+				<tr>
+					<th>Course</th>
+					<th>Description</th>
+					<th>Length</th>
+					<th>Price</th>
+					<th>Update</th>
+					<th>Delete</th>
+				</tr>
+				<tr>
+					<td>Manual Handling</td>
+					<td>Learn how to lift items correctly</td>
+					<td>35 minutes</td>
+					<td>€25</td>
+					<td><button>Update</button></td>
+					<td><button>Delete</button></td>
+				</tr>
+
+				<tr>
+					<td>Fire Safety</td>
+					<td>Learn about fire safety</td>
+					<td>40 minutes</td>
+					<td>€30</td>
+					<td><button>Update</button></td>
+					<td><button>Delete</button></td>
+				</tr>
+
+				<tr>
+					<td>Display Screen</td>
+					<td>Learn about display screen equipment</td>
+					<td>35 minutes</td>
+					<td>€25</td>
+					<td><button>Update</button></td>
+					<td><button>Delete</button></td>
+				</tr>
+			</table>
+		</div>
+
+		<div>
+			<h2><span>Create and</span> <span>update this</span> car</h2>
+			Course <select name="course">
+				 <option value="Manual Handling">Manual Handling</option>
+				 <option value="Fire Safety">Fire Safety</option>
+			   	 <option value="Display Screen">Display Screen</option>
+				 </select><br/>
+			Description <input type="text" name="description"/><br/>
+			Price <input type="number" name="price"/><br/>
+			<span><button>Create</button></span>
+			<span><button>Update</button></span>
+		</div>
+ </body>
+</html>
