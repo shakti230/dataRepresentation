@@ -1,0 +1,16 @@
+
+This repository hosts all files and documentation produced for the datarepresentation Project. 
+In here, you will find a Flask server file, data access object (DAO) file, configuration template file and a Web page called .
+
+This project is also hosted on the free (pythonanywhere.com) cloud service which can be accessed here.
+
+To run the WEB app, please:
+You will need a web browser such as Chrome or Firefox.
+
+Software used in this project:
+Visual Studio Code 
+Anaconda
+MySQL workbench
+
+Download and install Flask from PyPi.
+To start the Flask server, a small shell script named (runit) is included to start the server and enable error logging
