@@ -10,15 +10,12 @@ def add_user():
 	try:
 		_json = request.json
 		_name = _json['name']
-		_email = _json['email']
-		_password = _json['pwd']
+		_email = _json['course']
+		_password = _json['description']
 		# validate the received values
-		if _name and _email and _password and request.method == 'POST':
-			#do not save password as a plain text
-			_hashed_password = generate_password_hash(_password)
-			# save edits
-			sql = "INSERT INTO tbl_user(user_name, user_email, user_password) VALUES(%s, %s, %s)"
-			data = (_name, _email, _hashed_password,)
+		if _name and _course and description and request.method == 'POST':
+			sql = "INSERT INTO tbl_training(name, course, description) VALUES(%s, %s, %s)"
+			data = (_name, _course, _description,)
 			conn = mysql.connect()
 			cursor = conn.cursor()
 			cursor.execute(sql, data)
@@ -39,25 +36,9 @@ def users():
 	try:
 		conn = mysql.connect()
 		cursor = conn.cursor(pymysql.cursors.DictCursor)
-		cursor.execute("SELECT user_id id, user_name name, user_email email, user_password pwd FROM tbl_user")
+		cursor.execute("SELECT name, course, description FROM tbl_training")
 		rows = cursor.fetchall()
 		resp = jsonify(rows)
-		resp.status_code = 200
-		return resp
-	except Exception as e:
-		print(e)
-	finally:
-		cursor.close() 
-		conn.close()
-		
-@app.route('/user/<int:id>')
-def user(id):
-	try:
-		conn = mysql.connect()
-		cursor = conn.cursor(pymysql.cursors.DictCursor)
-		cursor.execute("SELECT user_id id, user_name name, user_email email, user_password pwd FROM tbl_user WHERE user_id=%s", id)
-		row = cursor.fetchone()
-		resp = jsonify(row)
 		resp.status_code = 200
 		return resp
 	except Exception as e:
@@ -72,15 +53,12 @@ def update_user():
 		_json = request.json
 		_id = _json['id']
 		_name = _json['name']
-		_email = _json['email']
-		_password = _json['pwd']		
+		_course = _json['course']
+		_description = _json['description']		
 		# validate the received values
-		if _name and _email and _password and _id and request.method == 'PUT':
-			#do not save password as a plain text
-			_hashed_password = generate_password_hash(_password)
-			# save edits
-			sql = "UPDATE tbl_user SET user_name=%s, user_email=%s, user_password=%s WHERE user_id=%s"
-			data = (_name, _email, _hashed_password, _id,)
+		if _name and _course and _description and request.method == 'PUT':
+			sql = "UPDATE tbl_training SET user_name=%s, user_course=%s, user_training=%s WHERE user_id=%s"
+			data = (_name, _course, _hashed_description)
 			conn = mysql.connect()
 			cursor = conn.cursor()
 			cursor.execute(sql, data)
@@ -101,7 +79,7 @@ def delete_user(id):
 	try:
 		conn = mysql.connect()
 		cursor = conn.cursor()
-		cursor.execute("DELETE FROM tbl_user WHERE user_id=%s", (id,))
+		cursor.execute("DELETE FROM tbl_training WHERE user_name="Mary", (name,))
 		conn.commit()
 		resp = jsonify('User deleted successfully!')
 		resp.status_code = 200
