@@ -8,3 +8,21 @@ Books will have an ISBN, title and author.
 
 
 ### Lab 1 - Create a HTML page
+
+### Lab 2 - Complete 10 exercises
+
+### Lab 3 - Web scraping
+
+### Lab 4- JSON and AJAX
+
+### Lab 5 - CURL and REST
+
+### Lab 6 - Packages for API's
+
+### Lab 7 - Consolidation of entire module
+
+### Lab 8 - Server side
+
+### Lab 9 - Linking server to a database
+
+### Lab 10 - Configuration files
