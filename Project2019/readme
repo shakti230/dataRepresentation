@@ -12,5 +12,5 @@ Visual Studio Code
 Anaconda
 MySQL workbench
 
-Download and install Flask from PyPi.
-To start the Flask server, a small shell script named (runit) is included to start the server and enable error logging
+Download and install Flask from pip.
+
