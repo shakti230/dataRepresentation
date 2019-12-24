@@ -1,0 +1,416 @@
+<html>
+	<head>
+	<title>Online Training</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<fieldset>
+<!-- Setting the colour of the font for the h1 header-->
+<h1 style="color:#FFFFFF;">Online Training</h1>
+</fieldset>
+
+
+ <!--Setting the fonts, border, position, hover and alignment for the navigation bar-->
+ <style>
+	body {font-family: Arial, Helvetica, sans-serif;}
+	* {box-sizing: border-box;}
+
+	.bg-img {
+	  /* The image used */
+	  background-image: url("images/training.jpg");
+	  min-height: 300px;
+
+	  /* Center and scale the image */
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  
+	  /* Positioning the navbar */
+	  position: relative;
+	}
+
+	/* Position the navbar container inside the image */
+	.container {
+	  position: absolute;
+	  margin: 20px;
+	  width: auto;
+	}
+
+	/* The navbar */
+	.topnav {
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	/* Navbar links */
+	.topnav a {
+	  float: left;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	  
+	}
+	.topnav-right {
+	  float: right;
+	}
+</style>
+
+<!--Setting the size of the paragraph line height-->
+<style>
+	p.big {
+	  line-height: 1.8;
+	}
+</style>
+<!--Setting the style for the social media icons at the bottom of the page-->
+<style>
+	.social-icons {
+	  text-align: center;
+	  }  
+	.social-icons li {
+	  display:inline-block;
+	  list-style-type:none;
+	  -webkit-user-select:none;
+	  -moz-user-select:none;
+	  }
+	.social-icons li a {
+	  border-bottom: none;
+	  }
+	.social-icons li img {
+	  width:40px;
+	  height:40px;
+	  margin-right: 20px;
+	}
+</style>
+
+	<!--Setting the style for the table - border, padding alignnment, spacing, background colour-->
+<style>
+	table, th, td {
+	  border: #696969;
+	  padding: 5px;
+	  align: center;
+	}
+	table {
+	  border-spacing: 15px;
+	}
+
+	th, td {
+	  padding: 15px;
+	}
+	tr:nth-child(even) {background-color: #f2f2f2;}
+	th {
+	  background-color: black;
+	  color: white;
+ </style>
+</head>
+
+<body bgcolor="#696969"> <!-- Setting the background colour on the page -->
+<!--Setting the div class for the navigation bar and links to pages-->
+<div class="bg-img">
+ <div class="topnav">
+  <a class="active" href="training.html">Home</a>
+  <a href="contactus.html">Contact Us</a>
+  <div class="topnav-right">
+    <a href="login.html">Login</a>
+  </div>
+</div>
+</div>
+		<div>
+			<span><button>Create New Training</button></span>
+		</div>		
+
+        <script>
+            function buttonClicked(){
+                var output= document.getElementById('Course Name').value
+                document.getElementById('output').innerText = output
+            }
+        </script>
+    <br/>
+
+		<div>
+			<table class="table">
+				<tr>
+					<th>Course Name</th>
+					<th>Course ID</th>
+					<th>Price</th>
+					<th>Update</th>
+					<th>Delete</th>
+				</tr>
+				
+				<tr>
+					<td>Manual Handling</td>
+					<td>3</td>
+					<td>25.00</td>
+					<td>Update</td>
+					<td>Delete</td>
+				</tr>
+				
+			</table>
+		</div>
+		
+
+		</br>
+		<img src="images/training.jpg" alt="training" align="left" hspace="15" height="270" title="training"> <!-- Adding an image to the left of the paragraph of text-->
+		<img src="images/training2.jpg" alt="training2" align="right" hspace="15" height="250" title="training2">  <!-- Adding an image to the right of the paragraph of text -->
+		</br>
+		
+		<h1 style="color:white;" id="one">Welcome to your Online Training</h1> <!-- Setting the heading and applying an id -->
+
+<p id="p1", class="big";> <!-- Opening paragraph tag -->
+Welcome to your Online Training. We offer a variety of different training courses to meet your needs. Call us today to make an enquiry.
+</p>
+</br>
+</br>
+<!--Creating a table to add a link to training, about and contact us pages-->
+<table border-color="#696969", width="1500", align="center">
+	<tr>
+		<a href="home.html"><th>Home</th></a>
+		<a href="login.html"><th>Login</th></a>
+		<a href="contactus.html"><th>Contact Us</th></a>
+	</tr>
+	
+	<tr>
+		<td>What do we offer?</td>
+		<td>Login to access training</td>
+		<td>Get in touch</td>
+	</tr>
+</table>
+		
+		        <div id='createUpdateForm' style="display: none">
+
+                <h2><span id="createLabel">Create</span> <span id="updateLabel">New</span> Training</h2>
+
+                <input type="hidden" Course Name="id"/>
+
+                Course Name <input type="text" Course Name="Course Name" /><br/>
+
+                Course ID <input type="text" Course Name="Course ID"/> <br/>
+
+                Price <input type="number" Course Name="Price"/> <br/>
+
+                <span><button id="doCreateButton" onclick="doCreate()">Create</button></span>
+
+                <span><button id="doUpdateButton" onclick="doUpdate()">Update</button></span>
+
+        </div>
+		
+	 <script>
+    function showCreate(){
+        document.getElementById('showCreateButton').style.display="none"
+        document.getElementById('trainingTable').style.display="none"
+        document.getElementById('createUpdateForm').style.display="block"
+        document.getElementById('createLabel').style.display="inline"
+        document.getElementById('updateLabel').style.display="none"
+        document.getElementById('doCreateButton').style.display="block"
+        document.getElementById('doUpdateButton').style.display="none"
+    }
+    function showViewAll(){
+        document.getElementById('showCreateButton').style.display="block"
+        document.getElementById('trainingTable').style.display="block"
+        document.getElementById('createUpdateForm').style.display="none"
+    }
+    function showUpdate(buttonElement){
+        document.getElementById('showCreateButton').style.display="none"
+        document.getElementById('trainingTable').style.display="none"
+        document.getElementById('createUpdateForm').style.display="block"
+        document.getElementById('createLabel').style.display="none"
+        document.getElementById('updateLabel').style.display="inline"
+        document.getElementById('doCreateButton').style.display="none"
+        document.getElementById('doUpdateButton').style.display="block"
+        var rowElement = buttonElement.parentNode.parentNode
+    
+        
+        var training = getTrainingFromRow(rowElement)
+        populateFormWithTraining(training)
+    }
+    function doCreate(){
+        var form = document.getElementById('createUpdateForm')
+        var training = {}
+       
+        training.Course Name = form.querySelector('input[Course Name="Course Name"]').value
+        training.Course ID = form.querySelector('input[Course Name="Course ID"]').value
+        training.Price = form.querySelector('input[Course Name="Price"]').value
+        console.log(JSON.stringify(training))
+        createTrainingAjax(training)
+        
+        
+    }
+    function doUpdate(){
+        var book = getTrainingFromForm();
+        var rowElement = document.getElementById(training.id);
+        updateTrainingAjax(training);
+        setTrainingInRow(rowElement,training);
+       
+        clearForm();
+        showViewAll();
+    }
+    function doDelete(r){
+        var tableElement = document.getElementById('trainingTable');
+        var rowElement = r.parentNode.parentNode;
+        var index = rowElement.rowIndex;
+        deleteTrainingAjax(rowElement.getAttribute("id"));
+        tableElement.deleteRow(index);
+    }
+    function addTrainingToTable(training){
+        var tableElement = document.getElementById('trainingTable')
+        var rowElement = tableElement.insertRow(-1)
+        rowElement.setAttribute('id',training.id)
+        var cell1 = rowElement.insertCell(0);
+        cell1.innerHTML = training.id
+        var cell2 = rowElement.insertCell(1);
+        cell2.innerHTML = training.Course Name
+        var cell3 = rowElement.insertCell(2);
+        cell3.innerHTML =training.Course ID
+        var cell4 = rowElement.insertCell(3);
+        cell4.innerHTML = training.Price
+        var cell5 = rowElement.insertCell(4);
+        cell5.innerHTML = '<button onclick="showUpdate(this)">Update</button>'
+        var cell6 = rowElement.insertCell(5);
+        cell6.innerHTML = '<button onclick=doDelete(this)>delete</button>'
+    }
+    function clearForm(){
+        var form = document.getElementById('createUpdateForm')
+        form.querySelector('input[Course Name="Course Name"]').value=''
+        form.querySelector('input[Course Name="Course ID"]').value=''
+        form.querySelector('input[Course Name="Price"]').value=''
+    }
+    function getTrainingFromRow(rowElement){
+        var car ={}
+        training.id  = rowElement.getAttribute('id')
+        training.Course Name = rowElement.cells[1].firstChild.textContent
+        training.Course ID = rowElement.cells[2].firstChild.textContent
+        training.Price = parseInt(rowElement.cells[3].firstChild.textContent,10)
+        return training
+    }
+    function setTrainingInRow(rowElement, training){
+        rowElement.cells[0].firstChild.textContent= training.id  
+        rowElement.cells[1].firstChild.textContent= training.Course Name 
+        rowElement.cells[2].firstChild.textContent= training.Course ID
+        rowElement.cells[3].firstChild.textContent= training.Price
+    }
+    function populateFormWithTraining(training){
+        var form = document.getElementById('createUpdateForm')
+        form.querySelector('input[Course Name="id"]').disabled = true
+        form.querySelector('input[Course Name="id"]').value  = training.id
+        form.querySelector('input[Course Name="Course Name"]').value= training.Course Name
+        form.querySelector('input[Course Name="Course ID"]').value= training.Course ID
+        form.querySelector('input[Course Name="Price"]').value= training.Price
+        return training
+    }
+    function getTrainingFromForm(){
+        var form = document.getElementById('createUpdateForm')
+        var book = {}
+        training.id = form.querySelector('input[Course Name="id"]').value
+        training.Course Name = form.querySelector('input[Course Name="Course Name"]').value
+        training.Course ID = form.querySelector('input[Course Name="Course ID"]').value
+        training.Price = parseInt(form.querySelector('input[Course Name="Price"]').value,10)
+        console.log(JSON.stringify(training))
+        return training
+    }
+    function getAllAjax(){
+        $.ajax({
+            "url": "http://",
+            "method":"GET",
+            "data":"",
+            "dataType": "JSON",
+            "success":function(result){
+                //console.log(result);
+                for (training of result){
+                    addTrainingToTable(training);
+                }
+                
+            },
+            "error":function(xhr,status,error){
+                console.log("error: "+status+" msg:"+error);
+            }
+        });
+    }
+    function createTrainingAjax(training){
+        console.log(JSON.stringify(training));
+        $.ajax({
+            "url": "http://",
+            "method":"POST",
+            "data":JSON.stringify(training),
+            "dataType": "JSON",
+            contentType: "application/json; charset=utf-8",
+            "success":function(result){
+                //console.log(result);
+                training.id = result.id
+                addTrainingToTable(training)
+                clearForm()
+                showViewAll()
+            },
+            "error":function(xhr,status,error){
+                console.log("error: "+status+" msg:"+error);
+            }
+        });
+    }
+    function updateBookAjax(training){
+        //var car = {"reg":"12 D 1234","price":8000}
+        console.log(JSON.stringify(book));
+        $.ajax({
+            "url": "http://127.0.0.1:5000/books/"+encodeURI(book.id),
+            "method":"PUT",
+            "data":JSON.stringify(book),
+            "dataType": "JSON",
+            contentType: "application/json; charset=utf-8",
+            "success":function(result){
+               // console.log(result);
+                  
+            },
+            "error":function(xhr,status,error){
+                console.log("error: "+status+" msg:"+error);
+            }
+        });
+    }
+    function deleteTrainingAjax(id){
+        
+        //console.log(JSON.stringify('deleting '+id));
+        $.ajax({
+            "url": "http://"+encodeURI(id),
+            "method":"DELETE",
+            "data":"",
+            "dataType": "JSON",
+            contentType: "application/json; charset=utf-8",
+            "success":function(result){
+                //console.log(result);
+                  
+            },
+            "error":function(xhr,status,error){
+                console.log("error: "+status+" msg:"+error);
+            }
+        });
+    }
+    getAllAjax();
+  
+    
+    </script>
+
+	</script>
+
+<!--Creating a block of colour and adding a list of social media icons with hyperlinks-->
+<div style="background-color:black;color:white;padding:20px;">
+  <h4 align="center">Follow us on Social Media </h4>
+<ul class="social-icons">
+    <li><a href="http://www.facebook.com"><img src='images/facebook.png' /></a></li>
+    <li><a href="http://www.twitter.com"><img src='images/twitter.png' /></a></li>
+    <li><a href="http://www.linkedin.com"><img src='images/linkedin.png' /></a></li>
+	<li><a href="http://www.snapchat.com"><img src='images/snapchat.png' /></a></li>
+	<li><a href="http://www.youtube.com"><img src='images/youtube.png' /></a></li>
+</ul>
+<script>
+document.write(Date()); <!--Use the dom to write the date to the page-->
+</script>
+</div>
+	
+	
+ </body>
+</html>
